@@ -1,0 +1,13 @@
+.logout {
+  background-color: red;
+  padding: 5px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.fa-solid {
+  color: blue;
+}

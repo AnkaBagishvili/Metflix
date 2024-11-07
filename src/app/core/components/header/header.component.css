@@ -2,6 +2,9 @@
   padding-inline: 20px;
   background: black;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   width: 110px;
@@ -16,7 +19,6 @@
   cursor: pointer;
   /* დროებით იყოს ესე,მერე ვნახოთ რესპონსივზე რას იზავს */
   font-size: 0.65vw;
-  /*  */
   transition: 1s;
 }
 .list:hover {

@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-navList = ["Home","TV Shows","Movies","My list"]
+  navList = ['Home', 'TV Shows', 'Movies', 'My list'];
+  // userName = [];
 }
