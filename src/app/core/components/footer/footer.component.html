@@ -1,8 +1,18 @@
 <footer class="footer">
-  <h3>Questions? Contact us!</h3>
+  <div class="socials">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
   <nav class="footer_nav">
-  <ul *ngFor="let item of footerList">
-    <li class="footer_list">{{item}}</li>
-  </ul>
-</nav>
+    <ul *ngFor="let item of footerList">
+      <li class="footer_list">{{ item }}</li>
+    </ul>
+  </nav>
 </footer>

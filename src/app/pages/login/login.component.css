@@ -1,0 +1,84 @@
+.login_page_body {
+  background-image: url("/assets/background.webp");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.login_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+}
+
+.login_container {
+  width: 100%;
+  text-align: center;
+}
+
+.login_header {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login_container input[type="text"],
+.login_container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #373737;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+}
+
+.login_container button[type="submit"],
+.login_container button.sign-up-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login_container button[type="submit"]:hover {
+  background-color: red;
+}
+
+.login_container p {
+  color: #b5b5b5;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.login_container button.sign-up-btn {
+  background: none;
+  color: white;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login_container button.sign-up-btn:hover {
+  color: red;
+}

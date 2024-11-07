@@ -1,20 +1,24 @@
-.header{
-    background: black;
-    height: 60px;
+.header {
+  padding-inline: 20px;
+  background: black;
+  height: 60px;
 }
-.logo{
-    width: 110px;
+.logo {
+  width: 110px;
 }
-.nav_bar{
-    display: flex;
-    align-items: center;
-    column-gap: 15px;
+.nav_bar {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
 }
-.list{
-    color: white;
-    cursor: pointer;
-    transition: 1s;
+.list {
+  color: white;
+  cursor: pointer;
+  /* დროებით იყოს ესე,მერე ვნახოთ რესპონსივზე რას იზავს */
+  font-size: 0.65vw;
+  /*  */
+  transition: 1s;
 }
-.list:hover{
-color: lightgray;
+.list:hover {
+  color: rgb(87, 86, 86);
 }
