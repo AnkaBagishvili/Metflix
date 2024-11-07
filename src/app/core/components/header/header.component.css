@@ -1,0 +1,20 @@
+.header{
+    background: black;
+    height: 60px;
+}
+.logo{
+    width: 110px;
+}
+.nav_bar{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.list{
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+}
+.list:hover{
+color: lightgray;
+}

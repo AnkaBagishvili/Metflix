@@ -1,0 +1,12 @@
+.footer{
+    /* display: flex; */
+    background:black;
+    margin-top: 100px;
+}
+.footer_nav{
+    display: flex;
+}
+
+.footer_list{
+    color: white;
+}
