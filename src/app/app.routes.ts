@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './core/components/header/header.component';
-import { SignupComponent } from './pages/signup/signup.component';
+import { BrowseComponent } from './pages/browse/browse.component';
 
 export const routes: Routes = [
   {
@@ -10,11 +10,17 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
-    component:LoginComponent,
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:'registration',
-    component:SignupComponent,
-  }
+    path: '',
+    component: HeaderComponent,
+    children: [
+      {
+        path: 'browse',
+        component: BrowseComponent,
+      },
+    ],
+  },
 ];

@@ -1,21 +1,66 @@
+@if (isLoginView) {
+
 <body class="login_page_body">
   <div class="login_form">
     <div class="login_container">
       <h2 class="login_header">Sign In</h2>
       <form>
-        <input type="text" name="username" placeholder="Email " required />
+        <input
+          type="text"
+          name="Email"
+          placeholder="Email
+        "
+          [(ngModel)]="userLogInObj.emailId"
+        />
         <input
           type="password"
           name="password"
           placeholder="Password"
-          required
+          [(ngModel)]="userLogInObj.password"
         />
-        <button type="submit">Sign In</button>
+        <button type="submit" (click)="onLogin()">Sign In</button>
       </form>
       <p>
         New to Netflix?
-        <button class="sign-up-btn">Sign up now.</button>
+        <button class="sign-up-btn" (click)="isLoginView = false">
+          Sign up now.
+        </button>
       </p>
     </div>
   </div>
 </body>
+} @else {
+<body class="login_page_body">
+  <div class="login_form">
+    <div class="login_container">
+      <h2 class="login_header">Sign Up</h2>
+      <form>
+        <input
+          type="text"
+          name="emailId"
+          placeholder="Email"
+          [(ngModel)]="userRegistrationObj.emailId"
+        />
+        <input
+          type="text"
+          name="username"
+          placeholder="Usermame"
+          [(ngModel)]="userRegistrationObj.userName"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          [(ngModel)]="userRegistrationObj.password"
+        />
+        <button type="submit" (click)="onRegister()">Sign Up</button>
+      </form>
+      <p>
+        Already have an account?
+        <a (click)="isLoginView = true">Sign in now.</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+}
