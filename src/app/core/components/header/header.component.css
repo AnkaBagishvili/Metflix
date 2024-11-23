@@ -5,22 +5,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 .logo {
   width: 110px;
 }
+
 .nav_bar {
   display: flex;
   align-items: center;
   column-gap: 15px;
 }
+
+.nav_ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .list {
   color: white;
   cursor: pointer;
-  /* დროებით იყოს ესე,მერე ვნახოთ რესპონსივზე რას იზავს */
-  font-size: 0.65vw;
-  transition: 1s;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
+
 .list:hover {
   color: rgb(87, 86, 86);
 }
@@ -30,13 +43,82 @@
   color: white;
   border-radius: 4px;
   border: none;
-  font-size: 15px;
+  font-size: 1rem;
+
   font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sign_out:hover {
   color: darkred;
   background-color: rgb(87, 86, 86);
-  transition: 1s;
-  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+
+  font-weight: 500;
+  color: aliceblue;
+}
+
+a span {
+  margin-right: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* resp */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding-block: 10px;
+  }
+
+  .nav_bar {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .list {
+    font-size: 14px;
+  }
+
+  .sign_out {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .list {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .sign_out {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  a span {
+    font-size: 13px;
+  }
 }

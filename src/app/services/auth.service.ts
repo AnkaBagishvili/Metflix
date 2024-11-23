@@ -5,8 +5,6 @@ import { User } from '../interfaces/user';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
-
   private emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   private passwordRegex = /^.{8,}$/;
 
@@ -59,5 +57,8 @@ export class AuthService {
       );
     }
     return false;
+  }
+  logOut() {
+    localStorage.clear();
   }
 }

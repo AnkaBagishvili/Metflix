@@ -1,5 +1,4 @@
 @if (isLoginView) {
-
 <body class="login_page_body">
   <div class="login_form">
     <div class="login_container">
@@ -37,15 +36,15 @@
       <form>
         <input
           type="text"
-          name="emailId"
-          placeholder="Email"
-          [(ngModel)]="userRegistrationObj.emailId"
-        />
-        <input
-          type="text"
           name="username"
           placeholder="Usermame"
           [(ngModel)]="userRegistrationObj.userName"
+        />
+        <input
+          type="text"
+          name="emailId"
+          placeholder="Email"
+          [(ngModel)]="userRegistrationObj.emailId"
         />
         <input
           type="password"
