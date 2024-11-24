@@ -2,8 +2,7 @@
   <p class="container-title">{{ title }}</p>
   <div #swiperContainer class="swiper-container">
     <div class="swiper-wrapper">
-      <!-- <div *ngFor="let movie of videoContents"> -->
-      <div class="swiper-slide movie-item">
+      <div class="movie-item swiper-slide" *ngFor="let movie of videoContents">
         <img [src]="movie.poster_path | poster" class="movie-poster" />
         <div class="movie-description">
           <span class="movie-title">{{ movie.original_title }}</span>
@@ -11,11 +10,10 @@
           <div class="details-container">
             <p class="details">
               <span class="vote-average"
-                >Vote Average: {{ movie.popularity }}
-              </span>
+                >Vote Average: {{ movie.popularity }}</span
+              >
             </p>
           </div>
-          <!-- </div> -->
         </div>
       </div>
     </div>

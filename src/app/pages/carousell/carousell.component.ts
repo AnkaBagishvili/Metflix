@@ -24,7 +24,7 @@ export class CarousellComponent implements OnInit, AfterViewInit {
   @Input() title!: string;
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   selectedContent: string | null = null;
-movie: any;
+  movie: any;
   constructor() {}
   ngAfterViewInit(): void {
     this.initSwiper();

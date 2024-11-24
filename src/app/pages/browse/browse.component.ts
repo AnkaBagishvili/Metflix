@@ -4,11 +4,12 @@ import { BannerComponent } from '../../core/components/banner/banner.component';
 import { CarousellComponent } from '../carousell/carousell.component';
 import { VideoContent } from '../../interfaces/video-content';
 import { forkJoin, map, Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-browse',
   standalone: true,
-  imports: [BannerComponent, CarousellComponent],
+  imports: [CommonModule, BannerComponent, CarousellComponent],
   templateUrl: './browse.component.html',
   styleUrl: './browse.component.css',
 })
@@ -26,11 +27,10 @@ export class BrowseComponent implements OnInit {
   sources = [
     this.movieService.getMovies(),
     this.movieService.getTvShows(),
-    this.movieService.getRatedMovies(),
-    this.movieService.getNowPlayingMovies(),
-    this.movieService.getUpcomingMovies(),
-    this.movieService.getPopularMovies(),
-    this.movieService.getTopRated(),
+    // this.movieService.getNowPlayingMovies(),
+    // this.movieService.getUpcomingMovies(),
+    // this.movieService.getPopularMovies(),
+    // this.movieService.getTopRated(),
   ];
   bannerDetail$ = new Observable<any>();
   bannerVideo$ = new Observable<any>();
@@ -38,42 +38,31 @@ export class BrowseComponent implements OnInit {
   ngOnInit(): void {
     forkJoin(this.sources)
       .pipe(
-        map(
-          ([
+        map(([movies, tvShows]) => {
+          this.bannerDetail$ = this.movieService.getBannerDetail(
+            movies.results[1].id
+          );
+          this.bannerVideo$ = this.movieService.getBannerVideo(
+            movies.results[1].id
+          );
+          return {
             movies,
             tvShows,
-            ratedMovies,
-            nowPlaying,
-            upcoming,
-            popular,
-            topRated,
-          ]) => {
-            this.bannerDetail$ = this.movieService.getBannerDetail(
-              movies.results[1].id
-            );
-            this.bannerVideo$ = this.movieService.getBannerVideo(
-              movies.results[1].id
-            );
-            return {
-              movies,
-              tvShows,
-              ratedMovies,
-              nowPlaying,
-              upcoming,
-              popular,
-              topRated,
-            };
-          }
-        )
+            // nowPlaying,
+            // upcoming,
+            // popular,
+            // topRated,
+          };
+        })
       )
       .subscribe((res: any) => {
         this.movies = res.movies.results as VideoContent[];
         this.tvShows = res.tvShows.results as VideoContent[];
-        this.ratedMovies = res.ratedMovies.results as VideoContent[];
-        this.nowPlayingMovies = res.nowPlaying.results as VideoContent[];
-        this.upcomingMovies = res.upcoming.results as VideoContent[];
-        this.popularMovies = res.popular.results as VideoContent[];
-        this.topRatedMovies = res.topRated.results as VideoContent[];
+        // this.ratedMovies = res.ratedMovies.results as VideoContent[];
+        // this.nowPlayingMovies = res.nowPlaying.results as VideoContent[];
+        // this.upcomingMovies = res.upcoming.results as VideoContent[];
+        // this.popularMovies = res.popular.results as VideoContent[];
+        // this.topRatedMovies = res.topRated.results as VideoContent[];
         this.getMovieKey();
       });
   }

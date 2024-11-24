@@ -12,8 +12,6 @@ const options: Movie = {
   },
   headers: {
     accept: 'application/json',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ODA5MmM0MzliNGZjODYxOWU2MzhlNzFhY2NiODNmNSIsIm5iZiI6MTczMjM3MjIzNi4yMDcxMjgsInN1YiI6IjY3M2U0M2VmNjJiZDc4ZTU3MTU4OGJmYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gmg7EEZq1L_kV0b60STtlK5IBF8AX_AbTI3Cth4LrgM',
   },
 };
 
@@ -25,61 +23,63 @@ export class MovieService {
 
   getMovies() {
     return this.http.get<any>(
-      'https://api.themoviedb.org/3/discover/movie',
+      'https://api.themoviedb.org/3/discover/movie?api_key=78092c439b4fc8619e638e71accb83f5',
       options
     );
   }
   getTvShows() {
-    return this.http.get('https://api.themoviedb.org/3/discover/tv', options);
-  }
-
-  getRatedMovies() {
     return this.http.get(
-      'https://api.themoviedb.org/3/guest_session/guest_session_id/rated/movies',
+      'https://api.themoviedb.org/3/discover/tv?api_key=78092c439b4fc8619e638e71accb83f5',
       options
     );
   }
 
   getBannerImage(id: number) {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/${id}/images`,
+      `https://api.themoviedb.org/3/movie/${id}/images?api_key=78092c439b4fc8619e638e71accb83f5`,
       options
     );
   }
 
   getBannerVideo(id: number) {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/${id}/videos`,
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=78092c439b4fc8619e638e71accb83f5`,
       options
     );
   }
 
   getBannerDetail(id: number) {
-    return this.http.get(`https://api.themoviedb.org/3/movie/${id}`, options);
-  }
-
-  getNowPlayingMovies() {
     return this.http.get(
-      'https://api.themoviedb.org/3/movie/now_playing',
+      `https://api.themoviedb.org/3/movie/${id}?api_key=78092c439b4fc8619e638e71accb83f5`,
       options
     );
   }
 
-  getPopularMovies() {
-    return this.http.get('https://api.themoviedb.org/3/movie/popular', options);
-  }
+  // getNowPlayingMovies() {
+  //   return this.http.get(
+  //     'https://api.themoviedb.org/3/movie/now_playing?api_key=78092c439b4fc8619e638e71accb83f5',
+  //     options
+  //   );
+  // }
 
-  getTopRated() {
-    return this.http.get(
-      'https://api.themoviedb.org/3/movie/top_rated',
-      options
-    );
-  }
+  // getPopularMovies() {
+  //   return this.http.get(
+  //     'https://api.themoviedb.org/3/movie/popular?api_key=78092c439b4fc8619e638e71accb83f5',
+  //     options
+  //   );
+  // }
 
-  getUpcomingMovies() {
-    return this.http.get(
-      'https://api.themoviedb.org/3/movie/upcoming',
-      options
-    );
-  }
+  // getTopRated() {
+  //   return this.http.get(
+  //     'https://api.themoviedb.org/3/movie/top_rated?api_key=78092c439b4fc8619e638e71accb83f5',
+  //     options
+  //   );
+  // }
+
+  // getUpcomingMovies() {
+  //   return this.http.get(
+  //     'https://api.themoviedb.org/3/movie/upcoming?api_key=78092c439b4fc8619e638e71accb83f5',
+  //     options
+  //   );
+  // }
 }

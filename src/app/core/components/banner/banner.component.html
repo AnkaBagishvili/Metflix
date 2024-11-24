@@ -1,12 +1,8 @@
-<iframe
-  class="banner_video"
-  src="https://www.youtube.com/embed/-1uFTjKl65E?autoplay=1&mute=1&loop=1&controls=0"
-  frameborder="0"
-></iframe>
+<iframe class="banner_video" [src]="videoUrl" frameborder="0"></iframe>
 <div class="movie">
   <div class="about_movie">
-    <h1 class="movie_title"></h1>
-    <p class="movie_description"></p>
+    <h1 class="movie_title">{{ bannerTitle }}</h1>
+    <p class="movie_description">{{ bannerDetails }}</p>
     <div class="buttons">
       <button class="play">Play</button>
       <button class="info">More Info</button>

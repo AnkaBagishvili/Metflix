@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   border: none;
 }
 
@@ -17,6 +17,7 @@
   color: white;
   overflow: hidden;
   padding: 0 3rem;
+  z-index: 1;
 }
 
 .about_movie {
