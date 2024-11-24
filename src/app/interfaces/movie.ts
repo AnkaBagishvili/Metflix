@@ -8,6 +8,5 @@ export interface Movie {
   };
   headers: {
     accept: string;
-    // Authorization: string;
   };
 }

@@ -62,7 +62,6 @@
   line-height: 1.2;
   margin-bottom: 1rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   color: #d1d1d1;
@@ -127,6 +126,5 @@
 
   .movie-overview {
     font-size: 0.7rem;
-    -webkit-line-clamp: 2;
   }
 }

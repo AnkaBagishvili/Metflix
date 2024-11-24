@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-browse',
   standalone: true,
-  imports: [CommonModule, BannerComponent, CarousellComponent],
+  imports: [CommonModule, BannerComponent, CarousellComponent, ],
   templateUrl: './browse.component.html',
   styleUrl: './browse.component.css',
 })

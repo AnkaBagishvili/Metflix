@@ -1,0 +1,62 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search_bar {
+  width: 80%;
+  padding: 10px 15px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: red;
+}
+
+.noMovies {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #bbb;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.cards_img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

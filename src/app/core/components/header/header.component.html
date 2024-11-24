@@ -2,10 +2,17 @@
   <nav class="nav_bar">
     <img class="logo" src="/assets/logo.png" class="logo" />
     <ul class="nav_ul" *ngFor="let item of navList">
-      <li class="list">{{ item }}</li>
+      <li class="list">
+        <a
+          [routerLink]="getNavRoute(item)"
+          routerLinkActive="active-link"
+          class="nav-link"
+        >
+          {{ item }}
+        </a>
+      </li>
     </ul>
   </nav>
-  <app-searchbar />
   <nav class="nav_bar">
     <a style="color: aliceblue"
       ><span>Welcome,{{ UserName }}</span></a
@@ -13,4 +20,5 @@
     <button class="sign_out" (click)="onSignOut()">Sign Out</button>
   </nav>
 </header>
-<app-browse />
+<router-outlet />
+<app-footer />
