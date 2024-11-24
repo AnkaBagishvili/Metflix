@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
-import { BannerComponent } from '../banner/banner.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { BrowseComponent } from '../../../pages/browse/browse.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, BannerComponent, SearchbarComponent],
+  imports: [CommonModule, SearchbarComponent, BrowseComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

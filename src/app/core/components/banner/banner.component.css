@@ -1,40 +1,40 @@
 .banner_video {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
+  border: none;
 }
 
 .movie {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to right, black, transparent 70%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 5%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  align-items: center;
   color: white;
+  overflow: hidden;
+  padding: 0 3rem;
 }
 
 .about_movie {
   max-width: 40%;
+  z-index: 1;
 }
 
 .movie_title {
   font-size: 4rem;
   font-weight: bold;
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .movie_description {
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.8rem;
   margin-bottom: 2rem;
+  color: #e5e5e5;
 }
 
 .buttons {
@@ -42,61 +42,77 @@
   gap: 1rem;
 }
 
-button {
-  padding: 0.75rem 2rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-button.play {
+.play {
   background-color: white;
   color: black;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button.play:hover {
-  background-color: lightgray;
-  transform: scale(1.05);
+.play:hover {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
-button.info {
-  background-color: rgba(128, 128, 128, 0.7);
+.info {
+  background-color: rgba(128, 128, 128, 0.5);
   color: white;
-}
-.fa-solid {
-  margin-right: 5px;
-}
-
-button.info:hover {
-  background-color: rgba(128, 128, 128, 1);
-  transform: scale(1.05);
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* respo */
+.info:hover {
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
 @media (max-width: 768px) {
   .about_movie {
-    max-width: 100%;
-    text-align: center;
+    max-width: 70%;
   }
 
   .movie_title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .movie_description {
     font-size: 1rem;
   }
 
-  .buttons {
-    justify-content: center;
-    flex-wrap: wrap;
+  .play,
+  .info {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_movie {
+    max-width: 100%;
+    text-align: center;
   }
 
-  button {
+  .movie_title {
+    font-size: 2rem;
+  }
+
+  .movie_description {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .play,
+  .info {
     width: 100%;
-    margin: 0.5rem 0;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }
