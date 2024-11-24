@@ -13,7 +13,7 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class HeaderComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
-  navList = ['Home', 'TV Shows', 'Movies', 'My list'];
+  navList = ['Home', 'TV Shows', 'Movies'];
 
   UserName: string | null = '';
 
@@ -38,8 +38,6 @@ export class HeaderComponent implements OnInit {
         return '/tv-shows';
       case 'Movies':
         return '/movies';
-      case 'My list':
-        return '/my-list';
       default:
         return '/';
     }

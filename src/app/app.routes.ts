@@ -3,7 +3,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { ErrorComponent } from './pages/error/error.component';
-import { MoviesComponent } from './pages/movies/movies.component';
 import { SearchbarComponent } from './pages/searchbar/searchbar.component';
 
 export const routes: Routes = [

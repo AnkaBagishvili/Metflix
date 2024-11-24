@@ -12,6 +12,10 @@
   <div *ngIf="message" class="noMovies">{{ message }}</div>
   <div class="cards" *ngFor="let movie of movies">
     <h2>{{ movie.title }}</h2>
-    <img [src]="imgPath + movie.poster_path" alt="{{ movie.title }}" />
+    <img
+      class="cards_img"
+      [src]="imgPath + movie.poster_path"
+      alt="{{ movie.title }}"
+    />
   </div>
 </div>

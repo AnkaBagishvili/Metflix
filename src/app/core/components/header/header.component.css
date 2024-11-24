@@ -70,7 +70,6 @@ a span {
   text-transform: capitalize;
 }
 
-/* resp */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
